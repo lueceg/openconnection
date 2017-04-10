@@ -42,6 +42,8 @@ public class HttpDataSource implements DataSource, InitializingBean {
     private final static String HTTP       = "http://";
 
     private final static String COLON_MARK = ":";
+    
+    private final static String DEFAULT_CHARSET = "GBK";
 
     /**
      * HTTP核心配置信息
@@ -71,7 +73,7 @@ public class HttpDataSource implements DataSource, InitializingBean {
                 && response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 HttpEntity entity = response.getEntity();
                 if (null != entity) {
-                    String data = EntityUtils.toString(entity);
+                    String data = EntityUtils.toString(entity, DEFAULT_CHARSET);
                     communicateResult.setData(data);
                 }
             }
