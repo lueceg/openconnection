@@ -9,18 +9,8 @@
 
 	<context:component-scan base-package="com.gua.open.connection" />
 	
-	<!-- http://datainterface.eastmoney.com/EM_DataCenter/JS.aspx?type=NS&sty=NSSTV5&st=12&sr=-1&p=6&ps=50&js=var%20NpCrZWud={pages:(pc),data:[(x)]}&stat=1&rt=49727588 -->
-		<bean id="httpConfiguration" class="com.gua.open.connection.communication.HttpConfiguration">
-		<property name="host" value="datainterface.eastmoney.com" />
-		<property name="port" value="80" />
-		<property name="urlPath" value="/EM_DataCenter/JS.aspx?type=NS&sty=NSSTV5&st=12&sr=-1&ps=50&js=var%20NpCrZWud={pages:(pc),data:[(x)]}&stat=1&rt=49727588" />
-		<property name="maxConnections" value="20" />
-		<property name="connectionRequestTimeout" value="500" />
-		<property name="connectTimeout" value="500" />
-		<property name="socketTimeout" value="2000" />
-	</bean>
+
 	
-	<!--  
 	<bean id="httpConfiguration" class="com.gua.open.connection.communication.HttpConfiguration">
 		<property name="host" value="data.eastmoney.com" />
 		<property name="port" value="80" />
@@ -30,6 +20,5 @@
 		<property name="connectTimeout" value="500" />
 		<property name="socketTimeout" value="2000" />
 	</bean>
-	-->
 
 </beans>

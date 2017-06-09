@@ -16,12 +16,25 @@ public class RequestParams {
      */
     private List<NameValuePair> nameValuePairs;
 
+    /**
+     * 请求的额外参数
+     */
+    private String              extraParams;
+
     public List<NameValuePair> getNameValuePairs() {
         return nameValuePairs;
     }
 
     public void setNameValuePairs(List<NameValuePair> nameValuePairs) {
         this.nameValuePairs = nameValuePairs;
+    }
+
+    public String getExtraParams() {
+        return extraParams;
+    }
+
+    public void setExtraParams(String extraParams) {
+        this.extraParams = extraParams;
     }
 
 }
